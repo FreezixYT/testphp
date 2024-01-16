@@ -11,7 +11,7 @@
 
 <?php
 // EXERCICE 1
-echo "Exercice_1 <br>";
+echo "<h1>Exercice_1</h1> <br>";
 echo "Nathan ";
 echo "Nathan ";
 ?>
@@ -19,7 +19,7 @@ echo "Nathan ";
 
 <?php
 // EXERCICE 2
-echo "Exercice_2 <br>";
+echo "<h1>Exercice_2 </h1><br>";
 $nombre1 = 3;
 $nombre2 = 5;
 
@@ -28,14 +28,14 @@ echo "$nombre1 et $nombre2 <br>";
 
 <?php
 // EXERCICE 3
-echo "Exercice_3 <br>";
+echo "<h1>Exercice_3 </h1><br>";
 $somme = $nombre1 + $nombre2;
 echo "$nombre1 + $nombre2 = $somme";
 ?>
 
 <?php
 // EXERCICE 4
-echo "Exercice_4 <br>";
+echo "<h1>Exercice_4</h1> <br>";
 $fahrenheit = 230;
 $celsius = 0;
 $celsius = ($fahrenheit - 32) * 5/9; 
@@ -46,7 +46,7 @@ echo "$fahrenheit est egalle a $celsius °";
 
 
 <?php
-echo "Exercice_5 <br>";
+echo "<h1>Exercice_5 </h1><br>";
 ?>
 
 <form action="serie1.php" method="post">
@@ -63,7 +63,7 @@ echo "La temperature est egalle à $celsius";
 ?>
 
 <?php
-echo "Exercice_5 TVA <br>";
+echo "<h1>Exercice 5 TVA <br></h1>";
 ?>
 
 <form action="serie1.php" method="post">
@@ -73,18 +73,20 @@ echo "Exercice_5 TVA <br>";
     <input type="number" name="tva">
 
     <label>Entrer le prix HT</label>
-    <input type="number" name="prix">
+    <input type="number" name="HTT">
 
     <input type="submit">
 </form>
 
 <?php
-$prix = 0;
-$tva = 0;
-$TTC = 0;
+$HTT = $_POST['prix'];
+$tva =  $_POST['tva'];
 
-echo "La temperature est egalle à $TTC";
 
+
+$TTC = $HTT + ($HTT * ($tva / 100));
+
+echo "Le prix TTC à $TTC";
 ?>
 
 
