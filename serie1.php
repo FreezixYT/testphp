@@ -40,7 +40,7 @@ $fahrenheit = 230;
 $celsius = 0;
 $celsius = ($fahrenheit - 32) * 5/9; 
 
-echo "$fahrenheit est egalle a $celsius °"
+echo "$fahrenheit est egalle a $celsius °";
 
 ?>
 
@@ -55,11 +55,41 @@ echo "Exercice_5 <br>";
 
     <input type="submit">
 </form>
+
 <?php
 $fahrenheit = $_POST['nombre1'];
 $celsius = ($fahrenheit - 32) * 5/9; 
 echo "La temperature est egalle à $celsius";
 ?>
+
+<?php
+echo "Exercice_5 TVA <br>";
+?>
+
+<form action="serie1.php" method="post">
+    <label>Calculateur de TVA</label>
+
+    <label>Entrer la Taux de TVA </label>
+    <input type="number" name="tva">
+
+    <label>Entrer le prix HT</label>
+    <input type="number" name="prix">
+
+    <input type="submit">
+</form>
+
+<?php
+$prix = 0;
+$tva = 0;
+$TTC = 0;
+
+echo "La temperature est egalle à $TTC";
+
+?>
+
+
+
+
 
 </body>
 </html>
